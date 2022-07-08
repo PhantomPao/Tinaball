@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+body {
+    background-color: #cec6c6;
+  }
+  
+  .pokeball {
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 150px);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    transform-origin: 50% 100%;
+    animation: wobble 5s infinite;
+  }
+  
+  h1 {
+    position: absolute;
+    bottom: 1px;
+    left: 132px;
+    color: whitesmoke;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to right, #9a10c4, #520469);
+  }
+  
+  .middle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: black;
+    transform: translateY(-50%);
+  }
+  
+  .middle::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    background: black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .middle::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to right, #1e85ca, #0d5a79);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to right, #cac9c9, #949494);
+  }
+  
+  .shadow {
+    position: absolute;
+    top: calc(50% + 150px);
+    left: 50%;
+    width: 300px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    filter: blur(10px);
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes wobble {
+    0%,
+    20%,
+    24%,
+    28%,
+    80%,
+    84%,
+    88%,
+    92%,
+    96%,
+    100% {
+      transform: rotate(0deg);
+    }
+  
+    22%,
+    82%,
+    90% {
+      transform: rotate(4deg);
+    }
+  
+    26%,
+    86%,
+    94% {
+      transform: rotate(-4deg);
+    }
+  }
+  
